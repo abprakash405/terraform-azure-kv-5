@@ -10,6 +10,6 @@ module "keyvault" {
   
   kv_name = var.kv_name
   location = azurerm_resource_group.example.location
-  resource_group_name1 = azurerm_resource_group.example.name
+  #resource_group_name1 = azurerm_resource_group.example.name
 
 }
