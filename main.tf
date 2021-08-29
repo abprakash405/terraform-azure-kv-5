@@ -13,3 +13,14 @@ module "keyvault" {
   rg_name = azurerm_resource_group.example.name
 
 }
+  
+module "azurerm_public_ip" {
+  source = "./modules/azurerm_public_ip"
+
+  pip_name            = var.pip_name
+  rg_name             = var.rg_name
+  location            = var.location
+  am                  = var.am
+  
+  
+}
