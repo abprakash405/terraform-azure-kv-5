@@ -14,8 +14,8 @@ module "keyvault" {
 
 }
   
-module "azurerm_public_ip" {
-  source = "./modules/azurerm_public_ip"
+module "azurerm-public-ip" {
+  source = "./modules/azurerm-public-ip"
 
   pip_name = var.pip_name
   rg_name  = var.rg_name
