@@ -14,9 +14,11 @@ module "keyvault" {
 
 }
   
-resource "azurerm_public_ip" "example" {
-  name                = "example-pip"
-  resource_group_name = azurerm_resource_group.example.name
+module "azurerm_public_ip" {
+  source = "./modules/azurerm-public-ip"
+  
+  pip_name                = var.pip_name
+  rg_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
-  allocation_method   = "Dynamic"
+  am   = var.am
 }
