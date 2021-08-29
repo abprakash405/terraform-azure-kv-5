@@ -6,5 +6,4 @@ resource "azurerm_public_ip" "example" {
   location            = var.location
   allocation_method   = var.am
   sku = "Standard"
-  tier = "Global"
 }
