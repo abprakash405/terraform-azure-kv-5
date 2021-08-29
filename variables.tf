@@ -40,4 +40,15 @@ variable "kv_name" {
   default = ""
 }
 
+variable "pip_name" {
+  description = "public ip name"
+  type        = string
+  default = ""
+}
+
+variable "am" {
+  description = "allocation method"
+  type        = string
+  default = ""
+}
 
