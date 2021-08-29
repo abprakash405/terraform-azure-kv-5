@@ -18,8 +18,8 @@ module "azurerm-public-ip" {
   source = "./modules/azurerm-public-ip"
 
   pip_name = var.pip_name
-  rg_name  = var.rg_name
-  location = var.location
+  rg_name  = azurerm_resource_group.example.name
+  location = azurerm_resource_group.example.location
   am       = var.am
   
   
